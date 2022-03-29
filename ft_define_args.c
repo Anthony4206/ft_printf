@@ -1,41 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_define_args.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alevasse <alevasse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/29 06:59:46 by alevasse          #+#    #+#             */
-/*   Updated: 2022/03/29 15:19:38 by alevasse         ###   ########.fr       */
+/*   Created: 2022/03/29 07:50:31 by alevasse          #+#    #+#             */
+/*   Updated: 2022/03/29 09:11:19 by alevasse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include "libft.h"
-# include <stdarg.h>
-
-typedef struct	s_flags
+int	ft_define_args(const char **fmt, va_list args)
 {
-	int	plus;
-	int	minus;
-	int	zero;
-	int space;
-	int	sharp;
-	int dot;
-}		t_flags;
+	t_opts	opts;
+	size_t	i;
+	size_t	len;
 
-typedef struct	s_opts
-{
-	t_flags	flags;
-	int		wdt;
-	int 	prc;
-}			t_opts;
-
-int	ft_printf(const char *fmt, ...);
-int	ft_parser(const char *fmt, va_list args);
-
-
-
-#endif 
+	opts = ft_define_opts();
+	i = 0;
+	len = 0;
+	while (i )
+}
