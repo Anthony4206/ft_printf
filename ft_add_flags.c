@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_add.c                                   :+:      :+:    :+:   */
+/*   ft_add_flags.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alevasse <alevasse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/29 07:45:04 by alevasse          #+#    #+#             */
-/*   Updated: 2022/03/30 08:40:03 by alevasse         ###   ########.fr       */
+/*   Created: 2022/03/30 11:53:49 by alevasse          #+#    #+#             */
+/*   Updated: 2022/03/30 15:45:48 by alevasse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar_add(char c);
+void	ft_add_flags(t_flags *flags, char c)
 {
-	ft_putchar(char c);
-	return (1);
+	if (c == '+')
+		flags->plus = 1;
+	else if (c == '-')
+		flags->minus = 1;
+	else if (c == '0')
+		flags->zero = 1;
+	else if (c == ' ')
+		flags->space = 1;
+	else if (c == '#')
+		flags->sharp = 1;
 }

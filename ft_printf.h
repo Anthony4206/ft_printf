@@ -6,7 +6,7 @@
 /*   By: alevasse <alevasse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 06:59:46 by alevasse          #+#    #+#             */
-/*   Updated: 2022/03/29 15:19:38 by alevasse         ###   ########.fr       */
+/*   Updated: 2022/03/30 15:46:03 by alevasse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,19 @@
 
 typedef struct	s_flags
 {
-	int	plus;
-	int	minus;
-	int	zero;
-	int space;
-	int	sharp;
-	int dot;
-}		t_flags;
+	int		plus;	
+	int		minus;	
+	int		zero;	
+	int 	space;	
+	int		sharp;
+	int		dot;
+}			t_flags;
 
 typedef struct	s_opts
 {
 	t_flags	flags;
 	int		wdt;
-	int 	prc;
+	int		prc;
 }			t_opts;
 
 int	ft_printf(const char *fmt, ...);
