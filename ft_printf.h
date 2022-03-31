@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alevasse <alevasse@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Anthony <Anthony@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 06:59:46 by alevasse          #+#    #+#             */
-/*   Updated: 2022/03/30 15:46:03 by alevasse         ###   ########.fr       */
+/*   Updated: 2022/03/30 19:05:55 by Anthony          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,10 @@ typedef struct	s_opts
 
 int	ft_printf(const char *fmt, ...);
 int	ft_parser(const char *fmt, va_list args);
-
-
+int	ft_putchar_add(char c);
+int 	ft_define_args(const char *fmt, va_list args, int *i);
+t_opts	ft_get_opts(const char *fmt, int *i);
+int	ft_is_flag(char c);
+void	ft_add_flags(t_flags *flags, char c);
 
 #endif 

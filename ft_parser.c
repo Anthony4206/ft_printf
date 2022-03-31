@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_parser.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alevasse <alevasse@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Anthony <Anthony@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 07:02:05 by alevasse          #+#    #+#             */
-/*   Updated: 2022/03/29 09:11:17 by alevasse         ###   ########.fr       */
+/*   Updated: 2022/03/30 19:05:58 by Anthony          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_parser(const char *fmt, va_list args)
 {
-	size_t	i;
+	int		i;
 	size_t	len;
 
 	i = 0;
@@ -24,11 +24,13 @@ int	ft_parser(const char *fmt, va_list args)
 		if (fmt[i] == '%')
 		{
 			i++;
-			len += ft_define_args(&fmt[i], args);
+			len += ft_define_args(fmt, args, &i);
 		}
 		else
-			len += ft_putchar_add(format[i]);
-		i++;
+		}
+			len += ft_putchar_add(fmt[i]);
+			i++;
+		}
 	}
 	return (len);
 }

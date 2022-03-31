@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_define_args.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alevasse <alevasse@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Anthony <Anthony@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 07:50:31 by alevasse          #+#    #+#             */
-/*   Updated: 2022/03/30 15:45:47 by alevasse         ###   ########.fr       */
+/*   Updated: 2022/03/30 19:06:03 by Anthony          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_define_args(const char **fmt, va_list args, int *i)
+int	ft_define_args(const char *fmt, va_list args, int *i)
 {
 	t_opts	opts;
 
