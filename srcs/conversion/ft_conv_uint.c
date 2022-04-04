@@ -24,7 +24,7 @@ static char *ft_wdt_uint(char *s, int len, t_opts opts)
 
     new = ft_strdup(s);
     ft_memset(new, ' ', opts.wdt);
-    new[opts.prc] = '\0';
+    new[opts.wdt] = '\0';
     if (opts.flags.zero && !opts.flags.minus)
         ft_memset(new, '0', opts.wdt);
     if (opts.flags.minus >= 1)

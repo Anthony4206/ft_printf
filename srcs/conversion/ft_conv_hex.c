@@ -78,7 +78,8 @@ int ft_conv_hex(unsigned int n, t_opts opts, int upper)
     {
         if (opts.flags.sharp >= 1 && opts.wdt && !opts.flags.dot
             && !opts.flags.zero)
-            s = ft_insert_str(s, ft_get_hex(upper), 0);
+            	s = ft_insert_str(s, ft_get_hex(upper), 0);
+		len = ft_strlen_int(s);
         s = ft_wdt_hex(s, len, opts);
         if (opts.flags.sharp && opts.flags.zero && !opts.flags.dot)
             s = ft_insert_str(s, ft_get_hex(upper), 0);

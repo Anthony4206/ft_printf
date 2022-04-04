@@ -6,7 +6,7 @@
 /*   By: Anthony <Anthony@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 09:21:10 by alevasse          #+#    #+#             */
-/*   Updated: 2022/04/03 20:46:48 by Anthony          ###   ########.fr       */
+/*   Updated: 2022/04/04 15:11:23 by alevasse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,28 @@ int	main()
 {
 	int		i;
 
+	printf("---------------------- PERSO ----------------------------- \n");
+	
+	ft_putchar('\n');
+    printf ("prin: %.2d\n", -1);
+    ft_printf ("prin: %.2d\n", -1);
+	ft_putchar('\n');
+    printf ("prin: %.3d\n", -11);
+    ft_printf("mine: %.3d\n", -11);
+    ft_putchar('\n');
+    printf("prin: %.3d\n", -99);
+    ft_printf("mine: %.3d\n", -99);
+	ft_putchar('\n');
+	printf("prin: %.4d\n", -101);
+	ft_printf("mine: %.4d\n", -101);
+ 	ft_putchar('\n');
+	/*printf("prin: %03d\n", -101);
+   	ft_printf("mine: %03d\n", -101);
+    ft_putchar('\n');
+	printf("prin: %010d\n", INT_MIN);
+	ft_printf("mine: %010d\n", INT_MIN);
+	ft_putchar('\n');
+	ft_putchar('\n');*/
 	printf("---------------------- CHAR ----------------------------- \n");
 	ft_putchar('\n');
 	printf ("prin: %c %c \n", 'a', 65);
@@ -189,9 +211,6 @@ int	main()
 	printf("pf: %.3d\n", -1993);
 	ft_printf("pf: %.3d\n", -1993);
 	ft_putchar('\n');
-	printf ("pf d and ld: %d %ld\n", 1977, 650000L);
-	ft_printf ("me d and ld: %d %ld\n", 1977, 650000L);
-	ft_putchar('\n');
 	printf ("pf preceding with blanks: %10d \n", 1977);
 	ft_printf("me preceding with blanks: %10d \n", 1977);
 	ft_putchar('\n');
@@ -352,11 +371,11 @@ int	main()
 	i = printf("pf #08: %#08x %c\n", 42, '.');
 	printf("%d\n", i);
 	i = ft_printf("me #08: %#08x %c\n", 42, '.');
-	printf("%d\n", i);
+	ft_printf("%d\n", i);
 	ft_putchar('\n');
 	i = printf("pf hash and padding:%#8x\n", 42);
 	printf("%d\n", i);
-	i =ft_printf("me hash and padding:%#8x\n", 42);
+	i = ft_printf("me hash and padding:%#8x\n", 42);
 	ft_printf("%d\n", i);
 	ft_putchar('\n');
 	i = printf("pf -42 :%x\n", -42);
