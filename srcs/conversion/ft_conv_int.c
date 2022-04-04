@@ -5,9 +5,8 @@ static char	*ft_wdt_int(char *s, int len, t_opts opts)
 	char	*new;
 	int		new_len;
 
-	new_len = 0;
 	new = ft_strdup(s);
-	ft_memset(new, ' ', opts.wdt)
+	ft_memset(new, ' ', opts.wdt);
 	new[opts.wdt] = '\0';
 	if (opts.flags.zero && !opts.flags.minus && !opts.prc)
 	{
@@ -22,7 +21,7 @@ static char	*ft_wdt_int(char *s, int len, t_opts opts)
 		new_len = opts.wdt - len;
 		new = ft_strncpy(&new[new_len], s, len);
 	}
-	free (s);
+//	free (s);
 	return (new);
 }
 
@@ -39,11 +38,11 @@ static char	*ft_neg_prc(char *s, int len, t_opts opts)
 	}
 	else
 	{
-		len = ft_strlen(new);
+		len = ft_strlen_int(new);
 		new = ft_wdt_int(new, len, opts);
 		new[0] = '-';
 	}
-	free(s);
+//	free(s);
 	return (new);
 }
 
@@ -62,7 +61,7 @@ static char	*ft_prc_int(char *s, int len, int neg, t_opts opts)
 	}
 	if (opts.flags.plus && !neg)
 		new = ft_insert_str(new, "+", 0);
-	free(s);
+//	free(s);
 	return (new);
 }
 
@@ -73,19 +72,19 @@ static char	*ft_opts_int(char *s, int len, int neg, t_opts opts)
 	new = ft_strdup(s);
 	if (opts.flags.plus && !opts.flags.zero && !opts.prc && !neg)
 		ft_insert_str(new, "+", 0);
-	if (opts.prc > ft_strlen(new))
+	if (opts.prc > ft_strlen_int(new))
 	{
-		len = ft_strlen(new);
+		len = ft_strlen_int(new);
 		new = ft_prc_int(new, len, neg, opts);
 	}
-	if (opts.wdt > ft_strlen(new))
+	if (opts.wdt > ft_strlen_int(new))
 	{
-		len = ft_strlen(new);
+		len = ft_strlen_int(new);
 		new = ft_wdt_int(new, len, opts);
 	}
 	if (opts.flags.space && !opts.flags.plus && !opts.prc && !neg)
 		new = ft_insert_str(new, " ", 0);
-	free(s);
+//	free(s);
 	return (new);
 }
 
@@ -99,11 +98,11 @@ int	ft_conv_int(int n, t_opts opts)
 	if (n < 0)
 		neg = 1;
 	s = ft_itoa(n);
-	len = ft_strlen(s);
+	len = ft_strlen_int(s);
 	if (neg)
 		s = ft_neg_prc(s, len, opts);
 	s = ft_opts_int(s, len, neg, opts);
-	len = ft_strlen(str);
+	len = ft_strlen_int(s);
 	if (s[len - 1] == '0' && opts.flags.dot 
 		&& !opts.prc && opts.wdt && !opts.flags.zero)
 		ft_memset(s, ' ', len);
@@ -111,6 +110,6 @@ int	ft_conv_int(int n, t_opts opts)
 		len = 0;
 	else
 		len = ft_putstr_size(s);
-	free(s);
+//	free(s);
 	return (len);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alevasse <alevasse@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Anthony <Anthony@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 15:33:40 by alevasse          #+#    #+#             */
-/*   Updated: 2022/03/31 08:14:44 by alevasse         ###   ########.fr       */
+/*   Updated: 2022/04/03 11:51:40 by Anthony          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,8 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putchar(char c);
 void	ft_putstr(const char *s);
 void	ft_putnbr(int n);
+void	ft_putendl(char *s);
+void    ft_putnbr_base(unsigned int n, char *base);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);

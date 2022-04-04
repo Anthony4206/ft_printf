@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: alevasse <alevasse@student.42.fr>          +#+  +:+       +#+         #
+#    By: Anthony <Anthony@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/29 07:00:06 by alevasse          #+#    #+#              #
-#    Updated: 2022/03/31 13:39:13 by alevasse         ###   ########.fr        #
+#    Updated: 2022/04/03 12:24:52 by Anthony          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME 			= libftprintf.a
 DIR_SRCS 			= srcs
 DIR_SRCS_B			= bonus
 DIR_OBJS 			= objs
-SUB_DIRS 			= printf
+SUB_DIRS 			= printf conversion utils
 SUB_DIRS_B			=
 
 SRCS_DIRS 			= ${foreach dir, ${SUB_DIRS}, ${addprefix ${DIR_SRCS}/, ${dir}}}
@@ -44,7 +44,7 @@ RM 				= rm -f
 
 REC 			= -r
 CC_FLAGS 		= -L.
-CC_LIBS 		= -lft
+CC_LIBS 		= -lftprintf
 
 GREEN			:= "\033[0;32m"
 CYAN			:= "\033[0;36m"

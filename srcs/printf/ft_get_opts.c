@@ -6,7 +6,7 @@
 /*   By: Anthony <Anthony@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 11:31:32 by alevasse          #+#    #+#             */
-/*   Updated: 2022/03/30 19:06:02 by Anthony          ###   ########.fr       */
+/*   Updated: 2022/04/03 11:46:25 by Anthony          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static t_flags	ft_get_flags(const char *fmt, int *i)
 	flags.dot = 0;
 	while (ft_is_flag(fmt[*i]))
 	{
-		ft_add_flag(flags, fmt[*i])
+		ft_add_flags(&flags, fmt[*i]);
 		(*i)++;
 	}
 	return (flags);
@@ -37,7 +37,7 @@ static int	ft_get_wdt(const char *fmt, int *i)
 	wdt = 0;
 	if (ft_isdigit(fmt[*i]))
 	{
-		wdt = ft_atoi(fmt[i]);
+		wdt = ft_atoi(&fmt[*i]);
 		while (ft_isdigit(fmt[*i]))
 			(*i)++;
 	}
@@ -48,17 +48,17 @@ static int	ft_get_prc(const char *fmt, int *i)
 {
 	int	prc;
 
-	if (*fmt[*i] != '.')
-		return (NULL);
-	if (*fmt[*i] == '.')
+	prc = 0;
+	if (fmt[*i] != '.')
+		return (prc);
+	if (fmt[*i] == '.')
 	{
-		prc = 0;
-		*i++;
-		if (ft_isdigit(*fmt[*i]))
+		(*i)++;
+		if (ft_isdigit(fmt[*i]))
 		{
-			prc = ft_atoi(fmt[*i]);
-			while (*fmt[*i])
-				*i++;
+			prc = ft_atoi(&fmt[*i]);
+			while (ft_isdigit(fmt[*i]))
+				(*i)++;
 		}
 	}
 	return (prc);
