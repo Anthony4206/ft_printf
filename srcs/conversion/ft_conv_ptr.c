@@ -5,9 +5,8 @@ static char *ft_wdt_ptr(char *s, int len, t_opts opts)
     char    *new;
     int     new_len;
 
-    new = ft_strdup(s);
+	new = ft_strnew(opts.wdt);
     ft_memset(new, ' ', opts.wdt);
-    new[opts.wdt] = '\0';
     if (opts.flags.minus >= 1)
         ft_strncpy(new, s, len);
     else

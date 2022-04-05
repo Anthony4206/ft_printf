@@ -17,13 +17,13 @@ static size_t	ft_count_len(unsigned long n)
 
 char	*ft_itoa_ptr(unsigned long n)
 {
-	const char  *index;
+	char  	*index;
     char	*dst;
 	size_t	len;
 
     index = "0123456789abcdef";
 	len = ft_count_len(n);
-	dst = (char *)malloc(sizeof(char) * (len + 1));
+	dst = (char *)malloc(sizeof(char) * (2 + len + 1));
 	if (!dst)
 		return (NULL);
 	dst[len] = '\0';

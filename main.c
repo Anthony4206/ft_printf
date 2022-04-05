@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Anthony <Anthony@student.42.fr>            +#+  +:+       +#+        */
+/*   By: alevasse <alevasse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 09:21:10 by alevasse          #+#    #+#             */
-/*   Updated: 2022/04/04 15:11:23 by alevasse         ###   ########.fr       */
+/*   Updated: 2022/04/05 15:06:37 by alevasse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,30 +15,37 @@
 
 int	main()
 {
+	
 	int		i;
 
 	printf("---------------------- PERSO ----------------------------- \n");
 	
 	ft_putchar('\n');
-    printf ("prin: %.2d\n", -1);
-    ft_printf ("prin: %.2d\n", -1);
+    i = printf ("%-10.u\n", 0);
+	printf ("%d\n", i);
+    i = ft_printf ("%-10.u\n", 0);
+	ft_printf ("%d\n", i);
 	ft_putchar('\n');
-    printf ("prin: %.3d\n", -11);
-    ft_printf("mine: %.3d\n", -11);
-    ft_putchar('\n');
-    printf("prin: %.3d\n", -99);
-    ft_printf("mine: %.3d\n", -99);
+ //   i = printf ("%.0d\n", 0);
+  //  printf ("%d\n", i);
+//	i = ft_printf("%.0d\n", 0);
+  //  ft_printf("%d\n", i);
+//	ft_putchar('\n');
+/*    printf("The address is %p, so what?\n", &test);
+    ft_printf("The address is %p, so what?\n", &test);
 	ft_putchar('\n');
-	printf("prin: %.4d\n", -101);
-	ft_printf("mine: %.4d\n", -101);
+	int *ptr = &test;
+	printf("A pointer at %p points to %p\n", &test, &ptr);
+	ft_printf("A pointer at %p points to %p\n", &test, &ptr);
  	ft_putchar('\n');
-	/*printf("prin: %03d\n", -101);
-   	ft_printf("mine: %03d\n", -101);
-    ft_putchar('\n');
-	printf("prin: %010d\n", INT_MIN);
-	ft_printf("mine: %010d\n", INT_MIN);
+	printf("This %p is a very strange address\n", (void *)(long int)test);
+   	ft_printf("This %p is a very strange address\n", (void *)(long int)test);
 	ft_putchar('\n');
-	ft_putchar('\n');*/
+	printf("prin: %d\n", 2);
+	ft_printf("mine: %d\n", 2);
+	ft_putchar('\n');
+	ft_putchar('\n');
+	
 	printf("---------------------- CHAR ----------------------------- \n");
 	ft_putchar('\n');
 	printf ("prin: %c %c \n", 'a', 65);
@@ -220,7 +227,8 @@ int	main()
 	printf ("pf: %-10d \n", 1977);
 	ft_printf("me: %-10d \n", 1977);
 	ft_putchar('\n');
-	printf ("pf: %-10d \n", -1977);
+Update on r/place :
+This is wonderful but we need allies. If you've got a reddit account, go to #_world_r_place!	printf ("pf: %-10d \n", -1977);
 	ft_printf("me: %-10d \n", -1977);
 	ft_putchar('\n');
 	printf ("pf plus flag: %+i \n", 1977);
@@ -306,7 +314,8 @@ int	main()
 	ft_putchar('\n');
 	i = printf("pf: %5.d %5.0d\n", 0, 0);
 	printf("%d\n", i);
- 	i = ft_printf("me: %5.d %5.0d\n", 0, 0);
+ 	i = ft_printf("me: %5.d %5.0d\n", 0, 0);Update on r/place :
+This is wonderful but we need allies. If you've got a reddit account, go to #_world_r_place!
 	ft_printf("%d\n", i);
 	ft_putchar('\n');
 	printf("pf: % d\n", -42);      
@@ -364,7 +373,8 @@ int	main()
 	printf("pf: %#08x\n", 7);
 	ft_printf("me: %#08x\n", 7);
 	ft_putchar('\n');
-	ft_putchar('\n');
+	ft_putchar('\n');Update on r/place :
+This is wonderful but we need allies. If you've got a reddit account, go to #_world_r_place!
 
 	printf("----------- HEX 42FC--------------- \n");
 	ft_putchar('\n');
@@ -525,5 +535,5 @@ int	main()
 
 	ft_putchar('\n');
 	system("leaks test");
-	return 0;
+	return 0;*/
 }

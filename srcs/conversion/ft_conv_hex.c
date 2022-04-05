@@ -13,8 +13,7 @@ static char *ft_prc_hex(char *s, int len, int upper, t_opts opts)
     char    *new;
     int     new_len;
 
-    new = ft_strdup(s);
-    new[opts.prc] = '\0';
+    new = ft_strnew(opts.prc);
     if (opts.prc > len)
     {
         ft_memset(new, '0', opts.prc);
@@ -32,9 +31,13 @@ static char *ft_wdt_hex(char *s, int len, t_opts opts)
     char    *new;
     int     new_len;
 
-    new = ft_strdup(s);
     if (opts.flags.sharp && opts.flags.zero)
-        opts.wdt -= 2;
+	{
+		new = ft_strnew(opts.wdt);
+		opts.wdt -= 2;    
+	}
+	else
+		new = ft_strnew(opts.wdt);
     ft_memset(new, ' ', opts.wdt);
     new[opts.wdt] = '\0';
     if (opts.flags.zero && !opts.flags.minus)

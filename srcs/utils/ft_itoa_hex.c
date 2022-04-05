@@ -17,8 +17,8 @@ static size_t	ft_count_len(unsigned int n)
 
 char	*ft_itoa_hex(unsigned int n, int upper)
 {
-	static char  *lowercase;
-    static char  *uppercase;
+	char  *lowercase;
+    char  *uppercase;
     char	*dst;
 	size_t	len;
 
