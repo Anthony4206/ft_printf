@@ -3,17 +3,13 @@
 static char *ft_wdt_ptr(char *s, int len, t_opts opts)
 {
     char    *new;
-    int     new_len;
 
 	new = ft_strnew(opts.wdt);
     ft_memset(new, ' ', opts.wdt);
-    if (opts.flags.minus >= 1)
+    if (opts.flags.minus)
         ft_strncpy(new, s, len);
     else
-    {
-        new_len = opts.wdt - len;
-        ft_strncpy(&new[new_len], s, len);
-    }
+        ft_strncpy(&new[opts.wdt - len], s, len);
     free(s);
     return (new);
 }
